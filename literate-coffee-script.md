@@ -1,4 +1,4 @@
-Literate CoffeeScript
+##### Literate CoffeeScript
 
 This file is my first literate coffee-script attempt. Obviously, I can trim
 down on the verbosity level a notch. Here and there I find the text a bit too
@@ -217,7 +217,7 @@ line.
 Prompter is a node package that is written to create json files, prompt for
 input (over the console) and evaluates expressions which are defined in a .json
 file. This is very nice as it allows us to think-out our common work patterns,
-properly define the elements of the pattern/workflow/procedure. 
+properly define the elements of the pattern/workflow/procedure.
 
 The literate programming style that I exhibit here, further enables us to write
 out a more elaborate, documented architecture; especially with dependencies it
