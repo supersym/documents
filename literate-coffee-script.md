@@ -1,4 +1,4 @@
-
+Literate CoffeeScript
 
 This file is my first literate coffee-script attempt. Obviously, I can trim
 down on the verbosity level a notch. Here and there I find the text a bit too
@@ -8,13 +8,13 @@ By now, you can get the literate coffee-script patch through the regular coffee-
 script distribution. All you need to do is to name the file as `.litcoffee` with
 that extension.
 
-You can get it [here](https://github.com/jashkenas/coffee-script/archive/master.zip)
+* You can get it [here](https://github.com/jashkenas/coffee-script/archive/master.zip)
 
 Also, there is a special extension for use in Sublime text-editor with literate
 code highlighting: markdown in the comments, coffee-script for indented pieces
 of 4 spaces.
 
-[Get the extension here](https://github.com/jashkenas/coffee-script-tmbundle.git)
+* [Get the extension here](https://github.com/jashkenas/coffee-script-tmbundle.git)
 
 Finally, you should know that you can compile `.coffee` and `.litcoffee` files
 from inside Sublime2 using `Ctrl+Shift+B` and this also works using the GitHub
@@ -85,16 +85,11 @@ now - to illustrate the presence of globals.
 
 ## Signal processing logic
 
-Signaling was one of the earlier, more primitive, ways in which computer
-processes and users we able to communicate. Later, this mostly became an
-abstraction based on (near) legacy ways of working with computers. In many cases
-low-level system signals for a powerful interface to running Unix processes. The
+Low-level system signals for a powerful interface to running Unix processes. The
 responsiveness to these signals is near excellent, and sometimes even special
 (hidden) features have been hooked to `USR1` and `USR2` signals of many well
-known applications in Linux and Mac OS X. Because often the first means of
-leaving a running program instance for any user, is the key combination `Ctrl+C`
-as soon as the program is up. Thats why any logic dealing with these low-level
-kills, controls and so on should come first.
+known applications in Linux and Mac OS X. This is one of the first controls a
+user gets and thus should be handled with in first order.
 
 Start reading from stdin so we don't exit the console.
 
@@ -188,17 +183,9 @@ Ok. If all is well, then let's continue to import some of our other stuff.
 
 ### External modules
 
-Technically, these titles are not a 100% accurate. It's not *always* modules
-that we are importing but for arguments sake, let's just consider the methods
-and properties which are exposed (using `module.exports` statements), and which
-belong to a certain class or group of entities rather than really "belong" to
-the module, to at least be a integrated part of it. Usually we will be depending
-upon the entire package anyway, by use of the `require` keyword we may access
-the externally defined sweetness.
-
-These packages however, are not something we can always just rely upon. The
-built-in, internal node.js logic, dictates for a major part some of its
-strengths and weaknesses but sadly, if a package is not found in the
+These packages are, contrary to the previous ones, not something we can always
+just rely upon. The built-in, internal node.js logic, dictates for a major part
+some of its strengths and weaknesses but sadly, if a package is not found in the
 `node_modules` tree of directories, node does nothing to offer us a download.
 Instead we get the very unfriendly stack dumps.
 
@@ -230,11 +217,12 @@ line.
 Prompter is a node package that is written to create json files, prompt for
 input (over the console) and evaluates expressions which are defined in a .json
 file. This is very nice as it allows us to think-out our common work patterns,
-properly define the elements of the pattern/workflow/procedure. The literate
-programming style that I exhibit here, further enables us to write out a more
-elaborate, documented architecture; especially with dependencies it can be good
-to be able and later recollect why certain - possibly fatal or essential for
-survival - are made.
+properly define the elements of the pattern/workflow/procedure. 
+
+The literate programming style that I exhibit here, further enables us to write
+out a more elaborate, documented architecture; especially with dependencies it
+can be good to be able and later recollect why certain - possibly fatal or
+essential for survival - are made.
 
 ```coffee-script
 
@@ -261,12 +249,9 @@ works as, for example, `package.json` field values for the `keywords` array.
 That is, once the term is no longer open for interpretation, the reality of
 [ambiguous](http://en.wikipedia.org/wiki/Ambiguity) terms is often one obstacle.
 
-Fortunately, wordnet has a extensive database of different `senses` of words and
-may allow for easier deduction of the sense through associated contextually
-important neighbouring words. To further enhance our Artificial Intelligence
-capabilities, I'll add-in a second tool, this one capable to break-up English
-[Part of Speech or POS.js](https://github.com/fortnightlabs/pos-js) tagged
-sentences.
+To further enhance our Artificial Intelligence capabilities, I'll add-in a
+second tool, this one capable to break-up English [Part of Speech or
+POS.js](https://github.com/fortnightlabs/pos-js) tagged sentences.
 
 ```coffee-script
 
