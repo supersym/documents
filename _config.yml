@@ -1,0 +1,10 @@
+auto: true
+server: true
+prose:
+  metadata:
+    "_posts/blog": |
+      title:    "Title of your article"
+      abstract: "Abstract"
+    "_posts/projects": |
+      name: "Project Name"
+      img:  "Project Thumbnail"
