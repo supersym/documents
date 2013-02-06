@@ -1,4 +1,30 @@
+
+
+This file is my first literate coffee-script attempt. Obviously, I can trim
+down on the verbosity level a notch. Here and there I find the text a bit too
+elaborate.
+
+By now, you can get the literate coffee-script patch through the regular coffee-
+script distribution. All you need to do is to name the file as `.litcoffee` with
+that extension.
+
+You can get it [here](https://github.com/jashkenas/coffee-script/archive/master.zip)
+
+Also, there is a special extension for use in Sublime text-editor with literate
+code highlighting: markdown in the comments, coffee-script for indented pieces
+of 4 spaces.
+
+[Get the extension here](https://github.com/jashkenas/coffee-script-tmbundle.git)
+
+Finally, you should know that you can compile `.coffee` and `.litcoffee` files
+from inside Sublime2 using `Ctrl+Shift+B` and this also works using the GitHub
+Flavored Markdown fenched code blocks which are \`\`\`coffee-script
+
 # Package definition construction
+
+This code is a first start to a clean, elegant processing of node.js packages in
+a manner that allows smart, AI enabled, user feedback through the command line
+standard output console.
 
 ## Module helper functions
 
