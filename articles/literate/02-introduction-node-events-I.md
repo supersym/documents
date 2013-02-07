@@ -18,31 +18,24 @@ especially for the tasks specific, and as such we'll often just conform to the
 
 From the Node.js 0.8.x reference manual we learn the following principle:
 
-```md
-
-Many objects in Node emit events: a `net.Server` emits an event each time a peer
+> Many objects in Node emit events: a `net.Server` emits an event each time a peer
 connects to it, a `fs.readStream` emits an event when the file is opened. All
 objects which emit events are instances of `events.EventEmitter`. You can access
 this module by doing: require("events");*
 <br><small>**API stability: 4 (frozen)</small>
-```
 
 Taking the evented I/O (input/output) approach, this design allows for us
 to cheaply put any function in a condition known as "event loop". To better
 understand the reasoning behind this architectural choice, first please consider
 the following:
 
-```md
-Functions can then be attached to objects, to be executed when an event is
+> Functions can then be attached to objects, to be executed when an event is
 emitted. These functions are called listeners.
-```
 
 and
 
-```md
-Node.js uses an event-driven, non-blocking I/O model. The first basic
+> Node.js uses an event-driven, non-blocking I/O model. The first basic
 thesis of node.js is that I/O is expensive.
-```
 
 Take a look at the following to get a basic idea of how expensive I/O really is.
 !["The cost of I/O"](http://blog.mixu.net/files/2011/01/io-cost.png)
