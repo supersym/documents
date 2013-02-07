@@ -67,21 +67,17 @@ they mean or only vaguely grasp the concept.
 
 The second basis thesis is that:
 
-```md
-the thread-per-connection approach is memory-expensive
-```
+> the thread-per-connection approach is memory-expensive
 
 Again from [Mixu][02]:
 
-```md
-Apache is multithreaded: it spawns a thread per request (or process, it depends
+> Apache is multithreaded: it spawns a thread per request (or process, it depends
 on the conf). You can see how that overhead eats up memory as the number of
 concurrent connections increases and more threads are needed to serve multiple
 simulataneous clients. Nginx and Node.js are not multithreaded, because threads
 and processes carry a heavy memory cost. They are single-threaded, but event-
 based. This eliminates the overhead created by thousands of threads/processes by
 handling many connections in a single thread.
-```
 
 ## Not everything is as it seems
 
@@ -155,25 +151,22 @@ thinking and trying to understand these abstract concepts, I found the following
 analogy a great way of representing these concepts in a fashion that we
 humans/laymen can comprehend:
 
-```md
-Web application should be as a restaurant. You have waiters (web server) and
+> Web application should be as a restaurant. You have waiters (web server) and
 cooks (**workers**). Waiters are in contact with clients and *do simple tasks*
 like providing menu or explaining if some dish is vegetarian. On the other hand
 they delegate harder tasks, such as getting all the ingredients and preparing
 the meal, to the kitchen. Because waiters are doing only simple things they
 respond quick, and cooks can concentrate (allocate resources) on their intensive
 job.
-
 Node.js here would be a *single but very talented waiter* that can process **many
 requests at a time**, and Apache would be a gang of dumb waiters that just process
 one request each.
-
 If this one Node.js waiter would begin to cook, it would be an immediate
 catastrophe. Still, cooking could also exhaust even a large supply of Apache
 waiters, not mentioning the chaos in the kitchen and the progressive decrease of
 responsitivity.
 <br><small>Thanks to [mbq][04]</small>
-```
+
 
 ### Parties, side-dishes and take-away
 
@@ -212,11 +205,11 @@ and we should be doing something better than just waiting for I/O.
 
 and
 
-```md
-All objects which emit events are instances of events.EventEmitter.
-Functions can then be attached to objects, to be executed when an event is emitted. These functions are called listeners.
-Listeners can be added to the end of the listeners array for the specified event. They then fire when the event takes place.
-```
+> All objects which emit events are instances of events.EventEmitter. Functions
+can then be attached to objects, to be executed when an event is emitted. These
+functions are called listeners. Listeners can be added to the end of the
+listeners array for the specified event. They then fire when the event takes
+place.
 
 This idea of "events" are now nothing more than the subjects we spoke about in
 this article. Listeners are also a well known pattern, mostly made popular by
